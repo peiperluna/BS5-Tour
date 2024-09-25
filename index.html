@@ -15,7 +15,7 @@
     <title>오로라투어 - Travel with us</title>
     <style>
       .c-item {
-        height: 480px;
+        height: 800px;
       }
 
       .c-img {
@@ -31,12 +31,16 @@
 				font-size: 1.2em;
 				color: crimson;
 			}
+      #package .card-img-top {
+				height: 250px;
+				object-fit: cover;
+			}
     </style>
   </head>
 
   <body>
     <!-- 네브바 시작 -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
           <img
@@ -60,7 +64,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">패키지</a>
+              <a class="nav-link" href="#package">패키지</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">FAQ</a>
@@ -226,7 +230,7 @@
     </section>
     <!-- 모달섹션 끝 -->
 
-    <!-- 오버뷰섹션 시작 -->
+    <!-- 오버뷰 섹션 시작 -->
 		<section class="overview d-flex align-items-center">
 			<div class="container-fluid">
 				<div class="row fs-4">
@@ -245,6 +249,56 @@
 				</div>
 			</div>
 		</section>
-		<!-- 오버뷰섹션 끝 -->
+		<!-- 오버뷰 섹션 끝 -->
+
+    <!-- 패키지 섹션 시작 -->
+    <section id="package" class="container py-5">
+      <div class="text-center py-5">
+        <h2 class="fw-bolder text-uppercase">PACKAGE</h2>
+        <p>오로라를 탐험하러 가세요!</p>
+      </div>
+      <div class="row pb-5">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/pic1.jpg" alt="" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title text-center py-2">Lorem ipsum dolor sit amet.</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis at illum natus sequi explicabo,
+                adipisci saepe et. Vero, labore enim.
+              </p>
+              <a href="#" class="btn btn-light">Read more...</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/pic2.jpg" alt="" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title text-center py-2">Lorem ipsum dolor sit amet.</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis at illum natus sequi explicabo,
+                adipisci saepe et. Vero, labore enim.
+              </p>
+              <a href="#" class="btn btn-light">Read more...</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <img src="images/pic3.jpg" alt="" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title text-center py-2">Lorem ipsum dolor sit amet.</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis at illum natus sequi explicabo,
+                adipisci saepe et. Vero, labore enim.
+              </p>
+              <a href="#" class="btn btn-light">Read more...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!-- 패키지 섹션 끝 -->
   </body>
 </html>
