@@ -13,7 +13,17 @@
     <script defer src="js/bootstrap.bundle.min.js"></script>
 
     <title>오로라투어 - Travel with us</title>
-    <style></style>
+    <style>
+      .c-item {
+        height: 890px;
+      }
+
+      .c-img {
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.6);
+      }
+    </style>
   </head>
 
   <body>
@@ -52,5 +62,160 @@
       </div>
     </nav>
     <!-- 네브바 끝 -->
+
+    <!-- 캐로셀 섹션 시작 -->
+    <section
+      id="hero-carousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"
+    >
+      <!-- 인디케이터 : 캐로셀이너 위에 -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <!-- ****캐로셀 이너**** -->
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img
+            src="images/pic1.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 1"
+          />
+          <!-- 캐로셀 캡션 : 이미지 밑에 (캐로셀 아이템 안) -->
+          <div class="carousel-caption top-0 mt-5">
+            <p class="mt-5 fs-3 text-uppercase">Discover the hidden world</p>
+            <h1 class="display-1 fw-bolder text-capitalize">
+              The Aurora Tours
+            </h1>
+            <button
+              class="btn btn-primary px-4 py-2 fs-5 mt-5"
+              data-bs-toggle="modal"
+              data-bs-target="#modal"
+            >
+              투어 예약
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img
+            src="images/pic2.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 2"
+          />
+          <div class="carousel-caption top-0 mt-5">
+            <p class="mt-5 fs-3 text-uppercase">THTE SEASON HAS ARRIVED</p>
+            <h1 class="display-1 fw-bolder text-capitalize">
+              3 Available Tours
+            </h1>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5"
+			data-bs-toggle="modal"
+              data-bs-target="#modal">
+              투어 예약
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img
+            src="images/pic3.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 3"
+          />
+          <div class="carousel-caption top-0 mt-5">
+            <p class="mt-5 fs-3 text-uppercase">DESTINATION ACTIVITIES</p>
+            <h1 class="display-1 fw-bolder text-capitalize">
+              Go Glacier Hiking
+            </h1>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5"
+			data-bs-toggle="modal"
+              data-bs-target="#modal">
+              투어 예약
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 가로 세로 버튼 : 캐로셀이너 아래에-->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#hero-carousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">이전</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#hero-carousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">다음</span>
+      </button>
+    </section>
+    <!-- 캐로셀 섹션 끝 -->
+
+    <!-- 모달섹션 시작 -->
+    <section id="modal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">투어 예약</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+				<div class="form-floating mb-3">
+					<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+					<label for="floatingInput">이메일</label>
+				  </div>
+				  <div class="form-floating">
+					<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+					  <option selected>노르웨이 트롬쇠 - 999만원</option>
+					  <option value="1">캐나다 옐로나이프 -899만원</option>
+					  <option value="2">알래스카 페어뱅크스 -789만원</option>
+					  <option value="3">핀란드 이발로 -1299만원</option>
+					</select>
+					<label for="floatingSelect">투어를 선택하세요!</label>
+				  </div>
+ 
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              취소
+            </button>
+            <button type="button" class="btn btn-primary">결재하기</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 모달섹션 끝 -->
   </body>
 </html>
